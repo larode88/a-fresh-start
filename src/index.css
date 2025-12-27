@@ -2,95 +2,150 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Scandinavian Design System - Warm, Soft, Timeless */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm cream background */
+    --background: 35 30% 97%;
+    --foreground: 25 15% 20%;
 
+    /* Soft white cards */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Warm sand/camel tone */
+    --primary: 30 40% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 35 35% 92%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm light beige */
+    --secondary: 35 25% 93%;
+    --secondary-foreground: 25 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Soft warm gray */
+    --muted: 35 20% 95%;
+    --muted-foreground: 25 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Soft sage green */
+    --accent: 145 25% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 145 20% 92%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success */
+    --success: 145 40% 48%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 145 35% 93%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warning - Soft amber */
+    --warning: 35 70% 55%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 35 60% 93%;
 
-    --radius: 0.5rem;
+    /* Destructive - Soft coral */
+    --destructive: 0 55% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --sidebar-background: 0 0% 98%;
+    /* Info - Soft blue */
+    --info: 200 45% 55%;
+    --info-foreground: 0 0% 100%;
+    --info-light: 200 40% 94%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Chart colors - Harmonisk palett for datavisualisering */
+    --chart-1: 195 65% 45%;
+    --chart-2: 340 55% 55%;
+    --chart-3: 25 55% 55%;
+    --chart-4: 145 45% 45%;
+    --chart-5: 270 40% 55%;
+    --chart-6: 45 60% 50%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Borders - Soft warm gray */
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 30 40% 55%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Larger radius for soft, rounded corners */
+    --radius: 1rem;
+    
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(30 40% 55%), hsl(35 45% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(145 25% 55%), hsl(145 40% 48%));
+    --gradient-info: linear-gradient(135deg, hsl(200 45% 55%), hsl(200 50% 58%));
+    
+    /* Soft, subtle shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(30 20% 20% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(30 20% 20% / 0.06);
+    --shadow-lg: 0 12px 24px -4px hsl(30 20% 20% / 0.08);
+    --shadow-card: 0 2px 16px hsl(30 20% 20% / 0.04);
+    --shadow-soft: 0 8px 32px hsl(30 20% 20% / 0.06);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar - Warm tones */
+    --sidebar-background: 35 30% 97%;
+    --sidebar-foreground: 25 15% 30%;
+    --sidebar-primary: 30 40% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 25% 93%;
+    --sidebar-accent-foreground: 25 15% 25%;
+    --sidebar-border: 35 15% 90%;
+    --sidebar-ring: 30 40% 55%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 25 20% 10%;
+    --foreground: 35 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 18% 14%;
+    --card-foreground: 35 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 18% 14%;
+    --popover-foreground: 35 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 30 45% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 30 40% 22%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 35 20% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 15% 18%;
+    --muted-foreground: 35 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 145 30% 50%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 145 25% 20%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 145 40% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 145 35% 18%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --warning: 35 65% 52%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 35 60% 18%;
+
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --info: 200 45% 52%;
+    --info-foreground: 0 0% 100%;
+    --info-light: 200 40% 18%;
+
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 30 45% 60%;
+    
+    --sidebar-background: 25 20% 10%;
+    --sidebar-foreground: 35 20% 90%;
+    --sidebar-primary: 30 45% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 25 15% 18%;
+    --sidebar-accent-foreground: 35 20% 90%;
+    --sidebar-border: 25 15% 20%;
+    --sidebar-ring: 30 45% 60%;
   }
 }
 
@@ -100,6 +155,74 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .gradient-info {
+    background: var(--gradient-info);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  /* Scandinavian soft hover effect */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-0.5;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  /* Respekter text-align fra Tiptap editor i prose-innhold */
+  .prose [style*="text-align: center"] {
+    text-align: center !important;
+  }
+  .prose [style*="text-align: right"] {
+    text-align: right !important;
+  }
+  .prose [style*="text-align: left"] {
+    text-align: left !important;
+  }
+  .prose [style*="text-align: justify"] {
+    text-align: justify !important;
+  }
+  
+  /* Sikre konsistent avsnittsmellomrom i prose-innhold */
+  .prose p {
+    margin-bottom: 1em;
+  }
+  
+  /* Håndter Tiptap's br-tags mellom avsnitt */
+  .prose p br:last-child {
+    display: none;
   }
 }
